@@ -3,18 +3,13 @@ package builder;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * ƒ^ƒO‚ÌƒvƒƒpƒeƒB‚ğŠi”[‚·‚éƒNƒ‰ƒX
- */
-public class TagPropertyMap<V> {
-
-	/** ƒvƒƒpƒeƒBŠi”[ƒ}ƒbƒv */
+	/** ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£æ ¼ç´ãƒãƒƒãƒ— */
 	private final Map<TagProperty, V> propertyMap = new HashMap<>();
 
 	/**
-	 * ƒvƒƒpƒeƒB‚ğ’Ç‰Á‚µ‚Ü‚·B
-	 * @param key ƒvƒƒpƒeƒB–¼
-	 * @param value ƒvƒƒpƒeƒB’l
+	 * ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+	 * @param key ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£å
+	 * @param value ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£å€¤
 	 */
 	public void put(TagProperty key, V value) {
 		propertyMap.put(key, value);

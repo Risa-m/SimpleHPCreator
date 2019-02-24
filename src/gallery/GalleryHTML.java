@@ -12,21 +12,21 @@ import java.io.OutputStreamWriter;
 import builder.SimpleHtmlBuilder;
 
 /**
- * Ê^ŠÙ‚ÌHTMLƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚é‚½‚ß‚ÌƒNƒ‰ƒX
+ * å†™çœŸé¤¨ã®HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ãŸã‚ã®ã‚¯ãƒ©ã‚¹
  * @author Risa
  *
  */
 public class GalleryHTML {
-	
+
 	private String folder, event, headerfile, footerfile;
 	private int thisYear;
 	/**
-	 * HTMLƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚é‚½‚ß‚É•K—v‚Èî•ñ‚ğİ’è‚µAƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚éB
-	 * @param folder Ê^‚ª•Û‘¶‚³‚ê‚½ƒtƒHƒ‹ƒ_‚Ö‚Ì‘Š‘ÎƒpƒX
-	 * @param event Ê^‚ÌƒCƒxƒ“ƒg–¼
-	 * @param headerfile ¶¬‚·‚éHTMLƒtƒ@ƒCƒ‹‚Ìƒwƒbƒ_[î•ñ
-	 * @param footerfile ¶¬‚·‚éHTMLƒtƒ@ƒCƒ‹‚Ìƒtƒbƒ^[î•ñ
-	 * @param thisYear Ê^‚ÌƒCƒxƒ“ƒg‚ªs‚í‚ê‚½”N“x
+	 * HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ãŸã‚ã«å¿…è¦ãªæƒ…å ±ã‚’è¨­å®šã—ã€ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param folder å†™çœŸãŒä¿å­˜ã•ã‚ŒãŸãƒ•ã‚©ãƒ«ãƒ€ã¸ã®ç›¸å¯¾ãƒ‘ã‚¹
+	 * @param event å†™çœŸã®ã‚¤ãƒ™ãƒ³ãƒˆå
+	 * @param headerfile ç”Ÿæˆã™ã‚‹HTMLãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ˜ãƒƒãƒ€ãƒ¼æƒ…å ±
+	 * @param footerfile ç”Ÿæˆã™ã‚‹HTMLãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ãƒƒã‚¿ãƒ¼æƒ…å ±
+	 * @param thisYear å†™çœŸã®ã‚¤ãƒ™ãƒ³ãƒˆãŒè¡Œã‚ã‚ŒãŸå¹´åº¦
 	 */
 	public GalleryHTML(String folder, String event,String headerfile, String footerfile, int thisYear) {
 		this.folder = folder;
@@ -38,8 +38,8 @@ public class GalleryHTML {
 	}
 
 	/**
-	 * İ’è‚³‚ê‚½î•ñ‚©‚çHTMLƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚éB¶¬‚³‚ê‚½ê‡‚Ítrue‚ğ•Ô‚µA¶¬‚Å‚«‚È‚©‚Á‚½ê‡‚Ífalse‚ğ•Ô‚·B
-	 * @return HTMLƒtƒ@ƒCƒ‹‚ª¶¬‚Å‚«‚½‚©”Û‚©
+	 * è¨­å®šã•ã‚ŒãŸæƒ…å ±ã‹ã‚‰HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ã€‚ç”Ÿæˆã•ã‚ŒãŸå ´åˆã¯trueã‚’è¿”ã—ã€ç”Ÿæˆã§ããªã‹ã£ãŸå ´åˆã¯falseã‚’è¿”ã™ã€‚
+	 * @return HTMLãƒ•ã‚¡ã‚¤ãƒ«ãŒç”Ÿæˆã§ããŸã‹å¦ã‹
 	 */
 	public boolean create() {
 		File outFile = new File(folder + "/index.html");
@@ -55,7 +55,7 @@ public class GalleryHTML {
 				bw.write(str);
 				bw.newLine();
 			}
-			
+
 			bw.write(mainHeader().toString());
 			bw.newLine();
 
@@ -66,7 +66,7 @@ public class GalleryHTML {
 			bw.close();
 			headbr.close();
 			footbr.close();
-			System.out.println("‘‚«‚İ‚Ü‚µ‚½B");
+			System.out.println("æ›¸ãè¾¼ã¿ã¾ã—ãŸã€‚");
 			return true;
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -74,18 +74,18 @@ public class GalleryHTML {
 		}
 }
 	/**
-	 * HTMLƒtƒ@ƒCƒ‹‚Ìmain‚Ìƒwƒbƒ_[•”•ª‚ğ¶¬‚·‚éB
-	 * @return ¶¬‚³‚ê‚½builder
+	 * HTMLãƒ•ã‚¡ã‚¤ãƒ«ã®mainã®ãƒ˜ãƒƒãƒ€ãƒ¼éƒ¨åˆ†ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @return ç”Ÿæˆã•ã‚ŒãŸbuilder
 	 */
 	public SimpleHtmlBuilder mainHeader() {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
         builder
             .main()
             .newline()
-            	.a("../../index.html").line("Ê^ŠÙ")._a()
+            	.a("../../index.html").line("å†™çœŸé¤¨")._a()
             	.line(" &gt; ")
             	.a("../"+(thisYear - (thisYear/100)*100)+"top.html")
-            	.line(thisYear+"”N“x")._a()
+            	.line(thisYear+"å¹´åº¦")._a()
             	.line(" &gt; ")
             	.line(event)
             	.newline()
@@ -94,5 +94,5 @@ public class GalleryHTML {
         return builder;
 	}
 
-	
+
 }

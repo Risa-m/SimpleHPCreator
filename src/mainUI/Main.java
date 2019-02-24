@@ -7,9 +7,9 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 /**
- * アプリケーションの基盤となるクラス
+ * 繧｢繝励Μ繧ｱ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ蝓ｺ逶､縺ｨ縺ｪ繧九け繝ｩ繧ｹ
  * @author Risa
- * 
+ *
  *
  */
 public class Main extends Application {
@@ -21,15 +21,15 @@ public class Main extends Application {
 		g.createTabPane(primaryStage);
 		htmlCreate(primaryStage);
 	}
-	
+
 	public void gallery(Stage primaryStage) {
 		new Gallery(primaryStage);
 	}
-	
+
 	public void htmlCreate(Stage primaryStage) {
 		new Scores(primaryStage);
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

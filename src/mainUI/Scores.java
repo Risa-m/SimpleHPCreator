@@ -24,14 +24,14 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- * ‡Œ‹‰Êi’c‘Ìíj‚ğ“ü—Í‚·‚é‰æ–Ê‚ğ¶¬‚·‚éB
+ * è©¦åˆçµæœï¼ˆå›£ä½“æˆ¦ï¼‰ã‚’å…¥åŠ›ã™ã‚‹ç”»é¢ã‚’ç”Ÿæˆã™ã‚‹ã€‚
  * @author Risa
  *
  */
 public class Scores {
 	/**
-	 * ‡Œ‹‰Êi’c‘Ìíj‚ğ“ü—Í‚·‚é‰æ–Ê‚ğ¶¬‚·‚éB
-	 * @param primaryStage ‰æ–Ê‚ğ•\¦‚·‚éStage
+	 * è©¦åˆçµæœï¼ˆå›£ä½“æˆ¦ï¼‰ã‚’å…¥åŠ›ã™ã‚‹ç”»é¢ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param primaryStage ç”»é¢ã‚’è¡¨ç¤ºã™ã‚‹Stage
 	 */
 	public Scores(Stage primaryStage) {
 		VBox vbox = new VBox();
@@ -40,14 +40,14 @@ public class Scores {
 
 		Button okbutton = new Button("OK");
 		TextField tf1 = new TextField("2018");
-		TextField tf2 = new TextField("‘åŠw");
-		TextField tf3 = new TextField("ƒŒƒ“ƒW");
+		TextField tf2 = new TextField("å¤§å­¦");
+		TextField tf3 = new TextField("ãƒ¬ãƒ³ã‚¸");
 		TextArea ta1 = new TextArea();
 		TextArea ta2 = new TextArea();
 		Text text = new Text();
 
-		RadioButton rb1 = new RadioButton("’jq");
-		RadioButton rb2 = new RadioButton("—q");
+		RadioButton rb1 = new RadioButton("ç”·å­");
+		RadioButton rb2 = new RadioButton("å¥³å­");
 		final ToggleGroup group = new ToggleGroup();
 		rb1.setToggleGroup(group);
 		rb1.setSelected(true);
@@ -65,14 +65,14 @@ public class Scores {
 				}
 			}
 		});
-		
-		Pane pf1 = setPane("”NŒ“ú", tf1);
-		Pane pf2 = setPane("‘ÎíZ", tf2);
-		Pane pf3 = setPane("êŠ", tf3);
-		Pane pa1 = setPane("–¼@Šw”N@“_”@”õl“™\n", ta1);
-		Pane pa2 = setPane("–¼@Šw”N@“_”@”õl“™\n(‘ŠèZ)", ta2);
-		 
-			
+
+		Pane pf1 = setPane("å¹´æœˆæ—¥", tf1);
+		Pane pf2 = setPane("å¯¾æˆ¦æ ¡", tf2);
+		Pane pf3 = setPane("å ´æ‰€", tf3);
+		Pane pa1 = setPane("æ°åã€€å­¦å¹´ã€€ç‚¹æ•°ã€€å‚™è€ƒç­‰\n", ta1);
+		Pane pa2 = setPane("æ°åã€€å­¦å¹´ã€€ç‚¹æ•°ã€€å‚™è€ƒç­‰\n(ç›¸æ‰‹æ ¡)", ta2);
+
+
 		vbox.getChildren().add(tabPane);
 		vbox.getChildren().add(grid);
 //		vbox.setPadding(new Insets(10,10,10,10));
@@ -88,7 +88,7 @@ public class Scores {
 		grid.add(pa2, 0, 6);
 		grid.add(okbutton, 0, 7);
 		grid.add(text, 0, 8);
-		
+
 		okbutton.setOnAction(actionEvent ->{
 			boolean check = true;
 			String str1 = tf1.getText();// date
@@ -103,14 +103,14 @@ public class Scores {
 			try {
 				for (int i = 0; i < strs1.length; i++) {
 					String[] splits = strs1[i].split(" |-");
-					Member members = new Member(splits[0], 
+					Member members = new Member(splits[0],
 							splits[1], splits[2],
 							splits[3], splits[4], (splits.length>5)?splits[5]:"");
 					list1.add(members);
 				}
 				for (int i = 0; i < strs2.length; i++) {
 					String[] splits = strs2[i].split(" |-");
-					Member members = new Member(splits[0], 
+					Member members = new Member(splits[0],
 							splits[1], splits[2],
 							splits[3], splits[4], (splits.length>5)?splits[5]:"");
 					list2.add(members);
@@ -119,33 +119,33 @@ public class Scores {
 				if(!str1.isEmpty()) {
 					if(!dataset.setDate(str1)) {
 						check = false;
-						text.setText("”NŒ“ú‚Í8Œ…‚Ì”¼Šp”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+						text.setText("å¹´æœˆæ—¥ã¯8æ¡ã®åŠè§’æ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 					}
 				}
 				else {
 					check = false;
-					text.setText("“ú•t‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+					text.setText("æ—¥ä»˜ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 				}
 				if(!str2.isEmpty())dataset.setOpponent(str2);
 				else {
 					check = false;
-					text.setText("‘ÎíZ‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+					text.setText("å¯¾æˆ¦æ ¡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 				}
 				if(!str3.isEmpty())dataset.setPlace(str3);
 				else {
 					check = false;
-					text.setText("êŠ‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+					text.setText("å ´æ‰€ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 				}
 				dataset.setMembers(list1);
 				dataset.setOpponentMembers(list2);
 				HTMLCreator creator = new HTMLCreator("header.txt", "footer.txt", dataset);
 				if(creator.create()&&check) {
-					text.setText("‘‚«‚İ‚Ü‚µ‚½B");
+					text.setText("æ›¸ãè¾¼ã¿ã¾ã—ãŸã€‚");
 				}else {
-//					text.setText("ƒtƒ@ƒCƒ‹‚ª‘¶İ‚µ‚Ü‚¹‚ñB");
+//					text.setText("ãƒ•ã‚¡ã‚¤ãƒ«ãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚");
 				}
 			}catch(ArrayIndexOutOfBoundsException e) {
-				text.setText("‡Œ‹‰Ê‚Í–¼AŠw”NA“_”‚ğ‹ó”’‚Å‹æØ‚Á‚Ä‚­‚¾‚³‚¢B");
+				text.setText("è©¦åˆçµæœã¯æ°åã€å­¦å¹´ã€ç‚¹æ•°ã‚’ç©ºç™½ã§åŒºåˆ‡ã£ã¦ãã ã•ã„ã€‚");
 			}
 		});
 		Scene scene = new Scene(vbox,600,600);
@@ -155,35 +155,35 @@ public class Scores {
 		primaryStage.show();
 	}
 	/**
-	 * ƒeƒLƒXƒg‚ÆƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚ğ‰¡‚É•À‚×‚½Pane‚ğ¶¬‚·‚éB
-	 * @param str •\¦‚·‚éƒeƒLƒXƒg
-	 * @param tf İ’u‚·‚éƒeƒLƒXƒgƒtƒB[ƒ‹ƒh
-	 * @return ‰¡•À‚Ñ‚É‚µ‚½Pane
+	 * ãƒ†ã‚­ã‚¹ãƒˆã¨ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’æ¨ªã«ä¸¦ã¹ãŸPaneã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param str è¡¨ç¤ºã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆ
+	 * @param tf è¨­ç½®ã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰
+	 * @return æ¨ªä¸¦ã³ã«ã—ãŸPane
 	 */
 	public Pane setPane(String str, TextField tf) {
 		HBox hbox = new HBox();
 		Text text = new Text(str);
-		
+
 		hbox.getChildren().add(text);
 		hbox.getChildren().add(tf);
 
 		hbox.setSpacing(20);
-		return hbox; 
+		return hbox;
 	}
 	/**
-	 * ƒeƒLƒXƒg‚ÆƒeƒLƒXƒgƒGƒŠƒA‚ğ‰¡‚É•À‚×‚½Pane‚ğ¶¬‚·‚éB
-	 * @param str •\¦‚·‚éƒeƒLƒXƒg
-	 * @param ta İ’u‚·‚éƒeƒLƒXƒgƒGƒŠƒA
-	 * @return ‰¡•À‚Ñ‚É‚µ‚½Pane
+	 * ãƒ†ã‚­ã‚¹ãƒˆã¨ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢ã‚’æ¨ªã«ä¸¦ã¹ãŸPaneã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param str è¡¨ç¤ºã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆ
+	 * @param ta è¨­ç½®ã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢
+	 * @return æ¨ªä¸¦ã³ã«ã—ãŸPane
 	 */
 	public Pane setPane(String str, TextArea ta) {
 		HBox hbox = new HBox();
 		Text text = new Text(str);
-		
+
 		hbox.getChildren().add(text);
 		hbox.getChildren().add(ta);
 		hbox.setSpacing(20);
-		
-		return hbox; 
+
+		return hbox;
 	}
 }

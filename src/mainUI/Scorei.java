@@ -20,14 +20,14 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- * ‡Œ‹‰ÊiŒÂlíj‚ğ“ü—Í‚·‚é‰æ–Ê‚ğ¶¬‚·‚éB
+ * è©¦åˆçµæœï¼ˆå€‹äººæˆ¦ï¼‰ã‚’å…¥åŠ›ã™ã‚‹ç”»é¢ã‚’ç”Ÿæˆã™ã‚‹ã€‚
  * @author Risa
  *
  */
 public class Scorei {
 	/**
-	 * ‡Œ‹‰ÊiŒÂlíj‚ğ“ü—Í‚·‚é‰æ–Ê‚ğ¶¬‚·‚éB
-	 * @param primaryStage ‰æ–Ê‚ğ•\¦‚·‚éStage
+	 * è©¦åˆçµæœï¼ˆå€‹äººæˆ¦ï¼‰ã‚’å…¥åŠ›ã™ã‚‹ç”»é¢ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param primaryStage ç”»é¢ã‚’è¡¨ç¤ºã™ã‚‹Stage
 	 */
 	public Scorei(Stage primaryStage) {
 		VBox vbox = new VBox();
@@ -36,18 +36,18 @@ public class Scorei {
 
 		Button okbutton = new Button("OK");
 		TextField tf1 = new TextField("2018");// date
-		TextField tf2 = new TextField("‹L˜^‰ï");// event
+		TextField tf2 = new TextField("è¨˜éŒ²ä¼š");// event
 		TextField tf3 = new TextField("");// place
 		TextArea ta1 = new TextArea();// result
 		Text text = new Text();
 
 
-		Pane pf1 = setPane("”NŒ“ú", tf1);
-		Pane pf2 = setPane("‘å‰ï–¼", tf2);
-		Pane pf3 = setPane("êŠ", tf3);
-		Pane pa1 = setPane("–¼@Šw”N@“_”@”õl“™\n", ta1);
-		 
-			
+		Pane pf1 = setPane("å¹´æœˆæ—¥", tf1);
+		Pane pf2 = setPane("å¤§ä¼šå", tf2);
+		Pane pf3 = setPane("å ´æ‰€", tf3);
+		Pane pa1 = setPane("æ°åã€€å­¦å¹´ã€€ç‚¹æ•°ã€€å‚™è€ƒç­‰\n", ta1);
+
+
 		vbox.getChildren().add(tabPane);
 		vbox.getChildren().add(grid);
 //		vbox.setPadding(new Insets(10,10,10,10));
@@ -61,7 +61,7 @@ public class Scorei {
 		grid.add(pa1, 0, 5);
 		grid.add(okbutton, 0, 7);
 		grid.add(text, 0, 8);
-		
+
 		okbutton.setOnAction(actionEvent ->{
 			boolean check = true;
 			String str1 = tf1.getText(); // date
@@ -73,7 +73,7 @@ public class Scorei {
 			try {
 				for (int i = 0; i < strs1.length; i++) {
 					String[] splits = strs1[i].split(" |-");
-					Member members = new Member(splits[0], 
+					Member members = new Member(splits[0],
 							splits[1], splits[2],
 							splits[3], splits[4], (splits.length>5)?splits[5]:"");
 					list.add(members);
@@ -83,27 +83,27 @@ public class Scorei {
 				if(!str1.isEmpty())dataset.setDate(str1);
 				else {
 					check = false;
-					text.setText("“ú•t‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+					text.setText("æ—¥ä»˜ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 				}
 				if(!str2.isEmpty())dataset.setEvent(str2);
 				else {
 					check = false;
-					text.setText("‘å‰ï–¼‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+					text.setText("å¤§ä¼šåã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 				}
 				if(!str3.isEmpty())dataset.setPlace(str3);
 				else {
 					check = false;
-					text.setText("êŠ‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+					text.setText("å ´æ‰€ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 				}
 				dataset.setMembers(list);
 				HTMLCreator creator = new HTMLCreator("header.txt", "footer.txt", dataset);
 				if(creator.createi()&&check) {
-					text.setText("‘‚«‚İ‚Ü‚µ‚½B");
+					text.setText("æ›¸ãè¾¼ã¿ã¾ã—ãŸã€‚");
 				}else {
-					
+
 				}
 			}catch(ArrayIndexOutOfBoundsException e) {
-				text.setText("”NŒ“ú‚Í8Œ…‚Ì”¼Šp”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B‡Œ‹‰Ê‚Í–¼AŠw”NA“_”‚ğ‹ó”’‚Å‹æØ‚Á‚Ä‚­‚¾‚³‚¢B");
+				text.setText("å¹´æœˆæ—¥ã¯8æ¡ã®åŠè§’æ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚è©¦åˆçµæœã¯æ°åã€å­¦å¹´ã€ç‚¹æ•°ã‚’ç©ºç™½ã§åŒºåˆ‡ã£ã¦ãã ã•ã„ã€‚");
 			}
 		});
 		Scene scene = new Scene(vbox,600,600);
@@ -113,36 +113,35 @@ public class Scorei {
 		primaryStage.show();
 	}
 	/**
-	 * ƒeƒLƒXƒg‚ÆƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚ğ‰¡‚É•À‚×‚½Pane‚ğ¶¬‚·‚éB
-	 * @param str •\¦‚·‚éƒeƒLƒXƒg
-	 * @param tf İ’u‚·‚éƒeƒLƒXƒgƒtƒB[ƒ‹ƒh
-	 * @return ‰¡•À‚Ñ‚É‚µ‚½Pane
+	 * ãƒ†ã‚­ã‚¹ãƒˆã¨ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’æ¨ªã«ä¸¦ã¹ãŸPaneã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param str è¡¨ç¤ºã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆ
+	 * @param tf è¨­ç½®ã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰
+	 * @return æ¨ªä¸¦ã³ã«ã—ãŸPane
 	 */
 	public Pane setPane(String str, TextField tf) {
 		HBox hbox = new HBox();
 		Text text = new Text(str);
-		
+
 		hbox.getChildren().add(text);
 		hbox.getChildren().add(tf);
 
 		hbox.setSpacing(20);
-		return hbox; 
+		return hbox;
 	}
 	/**
-	 * ƒeƒLƒXƒg‚ÆƒeƒLƒXƒgƒGƒŠƒA‚ğ‰¡‚É•À‚×‚½Pane‚ğ¶¬‚·‚éB
-	 * @param str •\¦‚·‚éƒeƒLƒXƒg
-	 * @param ta İ’u‚·‚éƒeƒLƒXƒgƒGƒŠƒA
-	 * @return ‰¡•À‚Ñ‚É‚µ‚½Pane
+	 * ãƒ†ã‚­ã‚¹ãƒˆã¨ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢ã‚’æ¨ªã«ä¸¦ã¹ãŸPaneã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param str è¡¨ç¤ºã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆ
+	 * @param ta è¨­ç½®ã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒªã‚¢
+	 * @return æ¨ªä¸¦ã³ã«ã—ãŸPane
 	 */
 	public Pane setPane(String str, TextArea ta) {
 		HBox hbox = new HBox();
 		Text text = new Text(str);
-		
+
 		hbox.getChildren().add(text);
 		hbox.getChildren().add(ta);
 		hbox.setSpacing(20);
-		
-		return hbox; 
+
+		return hbox;
 	}
 }
-

@@ -3,7 +3,7 @@ package construction;
 import java.util.ArrayList;
 
 /**
- * ‡Œ‹‰Ê‚ÌHTMLƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚é‚½‚ß‚É•K—v‚Èƒf[ƒ^‚ğİ’è‚·‚éƒNƒ‰ƒX
+ * è©¦åˆçµæœã®HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ãŸã‚ã«å¿…è¦ãªãƒ‡ãƒ¼ã‚¿ã‚’è¨­å®šã™ã‚‹ã‚¯ãƒ©ã‚¹
  * @author Risa
  *
  */
@@ -22,32 +22,32 @@ public class DataSet {
 	private static int format = BOYS;
 
 	/**
-	 * ’c‘Ìí‚É•K—v‚Èƒf[ƒ^‚ğİ’è‚µADataSet‚ğ¶¬‚·‚éB
-	 * @param date À{“ú
-	 * @param opponent ‘ÎíZ
-	 * @param place êŠ
-	 * @param members1 ©Z‚ÌŒ‹‰Ê
-	 * @param members2 ‘ŠèZ‚ÌŒ‹‰Ê
+	 * å›£ä½“æˆ¦ã«å¿…è¦ãªãƒ‡ãƒ¼ã‚¿ã‚’è¨­å®šã—ã€DataSetã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param date å®Ÿæ–½æ—¥
+	 * @param opponent å¯¾æˆ¦æ ¡
+	 * @param place å ´æ‰€
+	 * @param members1 è‡ªæ ¡ã®çµæœ
+	 * @param members2 ç›¸æ‰‹æ ¡ã®çµæœ
 	 */
 	public DataSet(String date, String opponent, String place, ArrayList<Member> members1, ArrayList<Member> members2) {
 		this.date = date;
 		setDate(date);
-		
+
 		this.opponent = opponent;
 		this.place = place;
 		this.members1 = members1;
 		this.members2 = members2;
 	}
 	/**
-	 * ƒf[ƒ^‚ğİ’è‚¹‚¸‚É¶¬‚·‚éB
+	 * ãƒ‡ãƒ¼ã‚¿ã‚’è¨­å®šã›ãšã«ç”Ÿæˆã™ã‚‹ã€‚
 	 */
-	public DataSet() {	
+	public DataSet() {
 	}
 
 	/**
-	 * ”NŒ“ú‚ğİ’è‚·‚éB
-	 * @param date ”¼Šp”š8ƒPƒ^‚Å•\‚³‚ê‚é”NŒ“ú
-	 * @return “ü—Í‚ª³‚µ‚¢‚©‚Ç‚¤‚©
+	 * å¹´æœˆæ—¥ã‚’è¨­å®šã™ã‚‹ã€‚
+	 * @param date åŠè§’æ•°å­—8ã‚±ã‚¿ã§è¡¨ã•ã‚Œã‚‹å¹´æœˆæ—¥
+	 * @return å…¥åŠ›ãŒæ­£ã—ã„ã‹ã©ã†ã‹
 	 */
 	public boolean setDate(String date) {
 		if (date.length() == 8) {
@@ -58,47 +58,47 @@ public class DataSet {
 			return true;
 		} else {
 			return false;
-//			System.out.println("“ú•t‚ª•s³‚Å‚·B");
+//			System.out.println("æ—¥ä»˜ãŒä¸æ­£ã§ã™ã€‚");
 		}
 	}
 	/**
-	 * ‘ÎíZ‚ğİ’è‚·‚éB
-	 * @param opponent ‘ÎíZ–¼
+	 * å¯¾æˆ¦æ ¡ã‚’è¨­å®šã™ã‚‹ã€‚
+	 * @param opponent å¯¾æˆ¦æ ¡å
 	 */
 	public void setOpponent(String opponent) {
 		this.opponent = opponent;
 	}
 	/**
-	 * êŠ‚ğİ’è‚·‚éB
-	 * @param place êŠ–¼
+	 * å ´æ‰€ã‚’è¨­å®šã™ã‚‹ã€‚
+	 * @param place å ´æ‰€å
 	 */
 	public void setPlace(String place) {
 		this.place = place;
 	}
 	/**
-	 * ©Z‚Ì‡Œ‹‰Ê‚ğİ’è‚·‚éB
-	 * @param members ©Z‚Ì‡Œ‹‰Ê
+	 * è‡ªæ ¡ã®è©¦åˆçµæœã‚’è¨­å®šã™ã‚‹ã€‚
+	 * @param members è‡ªæ ¡ã®è©¦åˆçµæœ
 	 */
 	public void setMembers(ArrayList<Member> members) {
 		this.members1 = members;
 	}
 	/**
-	 * ‘ŠèZ‚Ì‡Œ‹‰Ê‚ğİ’è‚·‚éB
-	 * @param members ‘ŠèZ‚Ì‡Œ‹‰Ê
+	 * ç›¸æ‰‹æ ¡ã®è©¦åˆçµæœã‚’è¨­å®šã™ã‚‹ã€‚
+	 * @param members ç›¸æ‰‹æ ¡ã®è©¦åˆçµæœ
 	 */
 	public void setOpponentMembers(ArrayList<Member> members) {
 		this.members2 = members;
 	}
 	/**
-	 * ‘å‰ï–¼‚ğİ’è‚·‚éB
-	 * @param event ‘å‰ï–¼
+	 * å¤§ä¼šåã‚’è¨­å®šã™ã‚‹ã€‚
+	 * @param event å¤§ä¼šå
 	 */
 	public void setEvent(String event) {
 		this.event = event;
 	}
 	/**
-	 * ©Z‚Ì“_”‚Ì˜a‚ğŒvZ‚·‚éB
-	 * @return ©Z‚Ì“_”‚Ì˜a
+	 * è‡ªæ ¡ã®ç‚¹æ•°ã®å’Œã‚’è¨ˆç®—ã™ã‚‹ã€‚
+	 * @return è‡ªæ ¡ã®ç‚¹æ•°ã®å’Œ
 	 */
 	public int getScoreSum1() {
 		int scoreSum = 0;
@@ -108,8 +108,8 @@ public class DataSet {
 		return scoreSum;
 	}
 	/**
-	 * ‘ŠèZ‚Ì“_”‚Ì˜a‚ğŒvZ‚·‚éB
-	 * @return ‘ŠèZ‚Ì“_”‚Ì˜a
+	 * ç›¸æ‰‹æ ¡ã®ç‚¹æ•°ã®å’Œã‚’è¨ˆç®—ã™ã‚‹ã€‚
+	 * @return ç›¸æ‰‹æ ¡ã®ç‚¹æ•°ã®å’Œ
 	 */
 	public int getScoreSum2() {
 		int scoreSum = 0;
@@ -118,91 +118,91 @@ public class DataSet {
 		}
 		return scoreSum;
 	}
-	
+
 	/**
-	 * À{”NŒ“ú‚ğæ“¾‚·‚éB
-	 * @return À{”NŒ“ú
+	 * å®Ÿæ–½å¹´æœˆæ—¥ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å®Ÿæ–½å¹´æœˆæ—¥
 	 */
 	public String getDate() {
 		return date;
 	}
 	/**
-	 * À{”N‚ğæ“¾‚·‚éB
-	 * @return À{”N
+	 * å®Ÿæ–½å¹´ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å®Ÿæ–½å¹´
 	 */
 	public int getYear() {
 		return year;
 	}
 	/**
-	 * À{Œ‚ğæ“¾‚·‚éB
-	 * @return À{Œ
+	 * å®Ÿæ–½æœˆã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å®Ÿæ–½æœˆ
 	 */
 	public int getMonth() {
 		return month;
 	}
 	/**
-	 * À{“ú‚ğæ“¾‚·‚éB
-	 * @return À{“ú
+	 * å®Ÿæ–½æ—¥ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å®Ÿæ–½æ—¥
 	 */
 	public int getDay() {
 		return day;
 	}
 	/**
-	 * ‘ÎíZ–¼‚ğæ“¾‚·‚éB
-	 * @return ‘ÎíZ–¼
+	 * å¯¾æˆ¦æ ¡åã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å¯¾æˆ¦æ ¡å
 	 */
 	public String getOpponent() {
 		return opponent;
 	}
 	/**
-	 * êŠ‚ğæ“¾‚·‚éB
-	 * @return êŠ
+	 * å ´æ‰€ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å ´æ‰€
 	 */
 	public String getPlace() {
 		return place;
 	}
 	/**
-	 * ©Z‚Ì‡Œ‹‰Ê‚ğæ“¾‚·‚éB
-	 * @return ©Z‚ÌMemberî•ñ
+	 * è‡ªæ ¡ã®è©¦åˆçµæœã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return è‡ªæ ¡ã®Memberæƒ…å ±
 	 */
 	public ArrayList<Member> getMember1(){
 		return members1;
 	}
 	/**
-	 * ‘ÎíZ‚Ì‡Œ‹‰Ê‚ğæ“¾‚·‚éB
-	 * @return ‘ÎíZ‚ÌMemberî•ñ
+	 * å¯¾æˆ¦æ ¡ã®è©¦åˆçµæœã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å¯¾æˆ¦æ ¡ã®Memberæƒ…å ±
 	 */
 	public ArrayList<Member> getMember2(){
 		return members2;
 	}
 	/**
-	 * ‘å‰ï–¼‚ğæ“¾‚·‚éB
-	 * @return ‘å‰ï–¼
+	 * å¤§ä¼šåã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å¤§ä¼šå
 	 */
 	public String getEvent() {
 		return event;
 	}
 	/**
-	 * ¶¬‚·‚éƒtƒ@ƒCƒ‹‚ÌƒtƒH[ƒ}ƒbƒg‚ğBOYS‚Éİ’è‚·‚éB
+	 * ç”Ÿæˆã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’BOYSã«è¨­å®šã™ã‚‹ã€‚
 	 */
 	public static void setBoys() {
 		format = BOYS;
 	}
 	/**
-	 * ¶¬‚·‚éƒtƒ@ƒCƒ‹‚ÌƒtƒH[ƒ}ƒbƒg‚ğGIRLS‚Éİ’è‚·‚éB
+	 * ç”Ÿæˆã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’GIRLSã«è¨­å®šã™ã‚‹ã€‚
 	 */
 	public static void setGirls() {
 		format = GIRLS;
 	}
 	/**
-	 * ¶¬‚·‚éƒtƒ@ƒCƒ‹‚ÌƒtƒH[ƒ}ƒbƒg‚ğINDIVIDUAL‚Éİ’è‚·‚éB
+	 * ç”Ÿæˆã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’INDIVIDUALã«è¨­å®šã™ã‚‹ã€‚
 	 */
 	public static void setIndividual() {
 		format = INDIVIDUAL;
 	}
 	/**
-	 * İ’è‚³‚ê‚½ƒtƒH[ƒ}ƒbƒg‚ğæ“¾‚·‚éB
-	 * @return İ’è‚³‚ê‚½ƒtƒH[ƒ}ƒbƒg
+	 * è¨­å®šã•ã‚ŒãŸãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return è¨­å®šã•ã‚ŒãŸãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆ
 	 */
 	public int getFormat() {
 		return format;

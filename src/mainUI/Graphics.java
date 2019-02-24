@@ -14,30 +14,30 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- * •¡”‚Ì‰æ–Ê‚©‚çŒÄ‚Ño‚³‚ê‚é‰Â”\«‚Ì‚ ‚éPane‚ğ‚ÂB
- * 
+ * è¤‡æ•°ã®ç”»é¢ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã‚‹å¯èƒ½æ€§ã®ã‚ã‚‹Paneã‚’æŒã¤ã€‚
+ *
  * @author Risa
  *
  */
 public class Graphics {
 	private static TabPane tabPane;
 	/**
-	 * 
+	 *
 	 */
 	public Graphics() {
-		
+
 	}
 	/**
-	 * •¡”‰æ–Ê‚ğØ‚è‘Ö‚¦‚ç‚ê‚éƒ^ƒu‚ğ‚ÂPane
-	 * @param primaryStage ƒ^ƒu‚ğ•\¦‚·‚éStage
-	 * 
+	 * è¤‡æ•°ç”»é¢ã‚’åˆ‡ã‚Šæ›¿ãˆã‚‰ã‚Œã‚‹ã‚¿ãƒ–ã‚’æŒã¤Pane
+	 * @param primaryStage ã‚¿ãƒ–ã‚’è¡¨ç¤ºã™ã‚‹Stage
+	 *
 	 */
 	public void createTabPane(Stage primaryStage) {
 		tabPane = new TabPane();
-		Tab tab1 = new Tab("‡Œ‹‰Ê(’c‘Ìí)");
-		Tab tab2 = new Tab("‡Œ‹‰Ê(ŒÂlí)");
-		Tab tab3 = new Tab("Ê^ŠÙ");
-		Tab tab4 = new Tab("g‚¢•ûƒƒ‚");
+		Tab tab1 = new Tab("è©¦åˆçµæœ(å›£ä½“æˆ¦)");
+		Tab tab2 = new Tab("è©¦åˆçµæœ(å€‹äººæˆ¦)");
+		Tab tab3 = new Tab("å†™çœŸé¤¨");
+		Tab tab4 = new Tab("ä½¿ã„æ–¹ãƒ¡ãƒ¢");
 		tab1.setClosable(false);
 		tab2.setClosable(false);
 		tab3.setClosable(false);
@@ -58,13 +58,13 @@ public class Graphics {
             }
         });
 	}
-	
+
 	/**
-	 * ¶¬‚³‚ê‚½TabPane‚ğ•Ô‚µ‚Ü‚·B
-	 * @return ¶¬‚³‚ê‚½TabPane
+	 * ç”Ÿæˆã•ã‚ŒãŸTabPaneã‚’è¿”ã—ã¾ã™ã€‚
+	 * @return ç”Ÿæˆã•ã‚ŒãŸTabPane
 	 */
 	public static TabPane getTabPane() {
 		return tabPane;
 	}
-	
+
 }

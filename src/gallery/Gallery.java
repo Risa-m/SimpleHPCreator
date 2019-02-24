@@ -17,47 +17,47 @@ import javafx.stage.Stage;
 import mainUI.Graphics;
 
 /**
- * Ê^‚Ìƒf[ƒ^‚ğ“ü—Í‚·‚é‰æ–Ê‚ğ¶¬‚·‚éƒNƒ‰ƒXB
+ * å†™çœŸã®ãƒ‡ãƒ¼ã‚¿ã‚’å…¥åŠ›ã™ã‚‹ç”»é¢ã‚’ç”Ÿæˆã™ã‚‹ã‚¯ãƒ©ã‚¹ã€‚
  * @author Risa
  *
  */
 public class Gallery {
 	TextField tf;
-	
+
 	/**
-	 * Ê^‚Ìƒf[ƒ^‚ğ“ü—Í‚·‚é‰æ–Ê‚ğ¶¬‚·‚éB
-	 * @param primaryStage ‰æ–Ê‚ğ•\¦‚·‚éStage
+	 * å†™çœŸã®ãƒ‡ãƒ¼ã‚¿ã‚’å…¥åŠ›ã™ã‚‹ç”»é¢ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param primaryStage ç”»é¢ã‚’è¡¨ç¤ºã™ã‚‹Stage
 	 */
 	public Gallery(Stage primaryStage) {
 		BorderPane border = new BorderPane();
 		GridPane grid = new GridPane();
 		VBox vbox = new VBox();
-		
+
 		TabPane tabPane = Graphics.getTabPane();
 
 		border.setCenter(vbox);
-		
+
 		Button button = new Button("OK");
-		Text eventText = new Text("ƒCƒxƒ“ƒg–¼"); 
+		Text eventText = new Text("ã‚¤ãƒ™ãƒ³ãƒˆå");
 		TextField event = new TextField();
-		Text yearText = new Text("”N“x");
+		Text yearText = new Text("å¹´åº¦");
 		TextField year = new TextField();
-		Text text = new Text("‘ÎÛƒtƒHƒ‹ƒ_‚Ö‚Ì‘Š‘ÎƒpƒX‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+		Text text = new Text("å¯¾è±¡ãƒ•ã‚©ãƒ«ãƒ€ã¸ã®ç›¸å¯¾ãƒ‘ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
 		Text restext = new Text();
 		tf = new TextField();
-		
+
 		button.setOnAction(actionEvent ->{
 			String name = getText();
 			File file = new File(name);
 			if(file.exists()) {
 				new JsonCreator(name);
 				new GalleryHTML(name, event.getText(), "galleryheader.txt", "galleryfooter.txt", Integer.parseInt(year.getText()));
-				restext.setText("\"image.json\",\"index.html\"‚ğì¬‚µ‚Ü‚µ‚½B");
+				restext.setText("\"image.json\",\"index.html\"ã‚’ä½œæˆã—ã¾ã—ãŸã€‚");
 			}else {
-				restext.setText("ƒtƒ@ƒCƒ‹‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB");
+				restext.setText("ãƒ•ã‚¡ã‚¤ãƒ«ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚");
 			}
 		});
-		
+
 		vbox.getChildren().add(tabPane);
 		vbox.getChildren().add(grid);
 
@@ -72,23 +72,23 @@ public class Gallery {
 		grid.add(tf, 0, 4);
 		grid.add(button, 0, 5);
 		grid.add(restext, 0, 6);
-		
+
 		Scene scene = new Scene(border,600,600);
 
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
-	
+
 	/**
-	 * @return ƒeƒLƒXƒgƒtƒB[ƒ‹ƒh
+	 * @return ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰
 	 */
 	public TextField getTextField() {
 		return tf;
 	}
-	
+
 	/**
-	 * ƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚É“ü—Í‚³‚ê‚½“à—e‚ğæ“¾‚·‚éB
-	 * @return ƒeƒLƒXƒgƒtƒB[ƒ‹ƒh‚É“ü—Í‚³‚ê‚½“à—eiÊ^‚Ì•Û‘¶‚³‚ê‚½ƒtƒHƒ‹ƒ_‚Ö‚Ì‘Š‘ÎƒpƒXj
+	 * ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«å…¥åŠ›ã•ã‚ŒãŸå†…å®¹ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«å…¥åŠ›ã•ã‚ŒãŸå†…å®¹ï¼ˆå†™çœŸã®ä¿å­˜ã•ã‚ŒãŸãƒ•ã‚©ãƒ«ãƒ€ã¸ã®ç›¸å¯¾ãƒ‘ã‚¹ï¼‰
 	 */
 	public String getText() {
 		return tf.getText();

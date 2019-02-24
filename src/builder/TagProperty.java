@@ -1,7 +1,7 @@
 package builder;
 
 /**
- * ƒ^ƒO‚ÌƒvƒƒpƒeƒB‚ğ—ñ‹“‚·‚éƒNƒ‰ƒX
+ * ã‚¿ã‚°ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’åˆ—æŒ™ã™ã‚‹ã‚¯ãƒ©ã‚¹
  */
 public enum TagProperty {
     /** border */
@@ -19,12 +19,12 @@ public enum TagProperty {
 	/**	id */
 	ID("id=");
 
-    /** ƒvƒƒpƒeƒB–¼ */
+    /** ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£å */
     private String propertyName;
     private TagProperty(String propertyName) {
-    	this.propertyName = propertyName; 
+    	this.propertyName = propertyName;
     }
-    
+
     @Override public String toString() {
     	return propertyName;
     }

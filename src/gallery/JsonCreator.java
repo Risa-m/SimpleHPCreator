@@ -6,11 +6,11 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 
 /**
- * 
+ *
  * @author Risa
- * 1‚Â‚ÌƒtƒHƒ‹ƒ_‚Ì’†‚ÉÊ^‚ğ‚Ü‚Æ‚ßA‚»‚ÌƒtƒHƒ‹ƒ_‚É‘Î‚·‚é‘Š‘ÎƒpƒX‚ğƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø”‚Éæ‚Á‚Ä‚¢‚éB<br>
- * ƒtƒHƒ‹ƒ_“à‚Ìƒtƒ@ƒCƒ‹–¼‚ğuimages.jsonv‚Æ‚¢‚¤ƒtƒ@ƒCƒ‹‚É—ñ‹“‚·‚éB<br>
- * images.json‚Í‘ÎÛƒtƒHƒ‹ƒ_’†‚É¶¬‚³‚ê‚éB
+ * 1ã¤ã®ãƒ•ã‚©ãƒ«ãƒ€ã®ä¸­ã«å†™çœŸã‚’ã¾ã¨ã‚ã€ãã®ãƒ•ã‚©ãƒ«ãƒ€ã«å¯¾ã™ã‚‹ç›¸å¯¾ãƒ‘ã‚¹ã‚’ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å¼•æ•°ã«å–ã£ã¦ã„ã‚‹ã€‚<br>
+ * ãƒ•ã‚©ãƒ«ãƒ€å†…ã®ãƒ•ã‚¡ã‚¤ãƒ«åã‚’ã€Œimages.jsonã€ã¨ã„ã†ãƒ•ã‚¡ã‚¤ãƒ«ã«åˆ—æŒ™ã™ã‚‹ã€‚<br>
+ * images.jsonã¯å¯¾è±¡ãƒ•ã‚©ãƒ«ãƒ€ä¸­ã«ç”Ÿæˆã•ã‚Œã‚‹ã€‚
  *
  */
 public class JsonCreator {
@@ -20,16 +20,16 @@ public class JsonCreator {
 	}
 	*/
 	/**
-	 * ‘ÎÛƒtƒHƒ‹ƒ_‚Ö‚Ì‘Š‘ÎƒpƒX‚ğó‚¯æ‚èA‚»‚ÌƒtƒHƒ‹ƒ_“à‚Ìƒtƒ@ƒCƒ‹–¼‚ğjsonƒtƒ@ƒCƒ‹‚É—ñ‹“‚·‚éB
-	 * @param path ‘Š‘ÎƒpƒX
+	 * å¯¾è±¡ãƒ•ã‚©ãƒ«ãƒ€ã¸ã®ç›¸å¯¾ãƒ‘ã‚¹ã‚’å—ã‘å–ã‚Šã€ãã®ãƒ•ã‚©ãƒ«ãƒ€å†…ã®ãƒ•ã‚¡ã‚¤ãƒ«åã‚’jsonãƒ•ã‚¡ã‚¤ãƒ«ã«åˆ—æŒ™ã™ã‚‹ã€‚
+	 * @param path ç›¸å¯¾ãƒ‘ã‚¹
 	 */
 	public JsonCreator(String path) {
 		try{
 		String str = path;
 		File cdir = new File(str);
-		
+
 		String[] filelist = cdir.list();
-		
+
 		File file = new File(str + "/images.json");
 		PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 
@@ -47,6 +47,6 @@ public class JsonCreator {
 		pw.close();
 		}catch(Exception e){
 			e.printStackTrace();
-		}	
+		}
 	}
 }

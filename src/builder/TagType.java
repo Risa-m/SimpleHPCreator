@@ -1,93 +1,93 @@
 package builder;
 
 /**
- * タグの種類を格納する列挙型
+ * 繧ｿ繧ｰ縺ｮ遞ｮ鬘槭ｒ譬ｼ邏阪☆繧句�玲嫌蝙�
  */
 public enum TagType {
-	/** {@code <html>タグ} */
+	/** {@code <html>繧ｿ繧ｰ} */
 	HTML("<html>"),
-	/** {@code </html>タグ} */
+	/** {@code </html>繧ｿ繧ｰ} */
 	_HTML("</html>"),
-	/** {@code <main>タグ} */
+	/** {@code <main>繧ｿ繧ｰ} */
 	MAIN("<main>"),
-	/** {@code </main>タグ} */
+	/** {@code </main>繧ｿ繧ｰ} */
 	_MAIN("</main>"),
-	/** {@code <div>タグ} */
+	/** {@code <div>繧ｿ繧ｰ} */
 	DIV("<div>"),
-	/** {@code </div>タグ} */
+	/** {@code </div>繧ｿ繧ｰ} */
 	_DIV("</div>"),
-	/** {@code <head>タグ} */
+	/** {@code <head>繧ｿ繧ｰ} */
 	HEAD("<head>"),
-	/** {@code </head>タグ} */
+	/** {@code </head>繧ｿ繧ｰ} */
 	_HEAD("</head>"),
-	/** {@code <title>タグ} */
+	/** {@code <title>繧ｿ繧ｰ} */
 	TITLE("<title>"),
-	/** {@code <html>タグ} */
+	/** {@code <html>繧ｿ繧ｰ} */
 	_TITLE("</title>"),
-	/** {@code <meta>タグ} */
+	/** {@code <meta>繧ｿ繧ｰ} */
 	META("<meta>"),
-	/** {@code </meta>タグ} */
+	/** {@code </meta>繧ｿ繧ｰ} */
 	_META("</meta>"),
-	/** {@code <body>タグ} */
+	/** {@code <body>繧ｿ繧ｰ} */
 	BODY("<body>"),
-	/** {@code </body>タグ} */
+	/** {@code </body>繧ｿ繧ｰ} */
 	_BODY("</body>"),
-	/** {@code <table>タグ} */
+	/** {@code <table>繧ｿ繧ｰ} */
 	TABLE("<table>"),
-	/** {@code </table> タグ} */
+	/** {@code </table> 繧ｿ繧ｰ} */
 	_TABLE("</table>"),
-	/** {@code <th> タグ} */
+	/** {@code <th> 繧ｿ繧ｰ} */
 	TH("<th>"),
-	/** {@code <th> タグ} */
+	/** {@code <th> 繧ｿ繧ｰ} */
 	_TH("</th>"),
-	/** {@code <tr> タグ} */
+	/** {@code <tr> 繧ｿ繧ｰ} */
 	TR("<tr>"),
-	/** {@code </tr> タグ} */
+	/** {@code </tr> 繧ｿ繧ｰ} */
 	_TR("</tr>"),
-	/** {@code <td>タグ} */
+	/** {@code <td>繧ｿ繧ｰ} */
 	TD("<td>"),
-	/** {@code </td>タグ} */
+	/** {@code </td>繧ｿ繧ｰ} */
 	_TD("</td>"),
-	/** {@code <thead>タグ} */
+	/** {@code <thead>繧ｿ繧ｰ} */
 	THEAD("<thead>"),
-	/** {@code </thead>タグ} */
+	/** {@code </thead>繧ｿ繧ｰ} */
 	_THEAD("</thead>"),
-	/** {@code <tfoot>タグ} */
+	/** {@code <tfoot>繧ｿ繧ｰ} */
 	TFOOT("<tfoot>"),
-	/** {@code </tfoot>タグ} */
+	/** {@code </tfoot>繧ｿ繧ｰ} */
 	_TFOOT("</tfoot>"),
-	/** {@code <caption>タグ} */
+	/** {@code <caption>繧ｿ繧ｰ} */
 	CAPTION("<caption>"),
-	/** {@code </caption>タグ} */
+	/** {@code </caption>繧ｿ繧ｰ} */
 	_CAPTION("</caption>"),
-	/** {@code <span>タグ} */
+	/** {@code <span>繧ｿ繧ｰ} */
 	SPAN("<span>"),
-	/** {@code </span>タグ} */
+	/** {@code </span>繧ｿ繧ｰ} */
 	_SPAN("</span>"),
-	/** {@code <h1>タグ} */
+	/** {@code <h1>繧ｿ繧ｰ} */
 	H1("<h1>"),
-	/** {@code </h1>タグ} */
+	/** {@code </h1>繧ｿ繧ｰ} */
 	_H1("</h1>"),
-	/** {@code <h2>タグ} */
+	/** {@code <h2>繧ｿ繧ｰ} */
 	H2("<h2>"),
-	/** {@code </h2>タグ} */
+	/** {@code </h2>繧ｿ繧ｰ} */
 	_H2("</h2>"),
-	/** {@code <h3>タグ} */
+	/** {@code <h3>繧ｿ繧ｰ} */
 	H3("<h3>"),
-	/** {@code </h3>タグ} */
+	/** {@code </h3>繧ｿ繧ｰ} */
 	_H3("</h3>"),
-	/** {@code <a>タグ} */
+	/** {@code <a>繧ｿ繧ｰ} */
 	A("<a>"),
-	/** {@code </a>タグ} */
+	/** {@code </a>繧ｿ繧ｰ} */
 	_A("</a>"),
-	/** {@code <p>タグ} */
+	/** {@code <p>繧ｿ繧ｰ} */
 	P("<p>"),
-	/** {@code </p>タグ} */
+	/** {@code </p>繧ｿ繧ｰ} */
 	_P("</p>"),
-	/** {@code <br> タグ} */
+	/** {@code <br> 繧ｿ繧ｰ} */
 	BR("<br>");
 
-	/** HTMLタグ */
+	/** HTML繧ｿ繧ｰ */
 	private String tag;
 
 	private TagType(String tag) {

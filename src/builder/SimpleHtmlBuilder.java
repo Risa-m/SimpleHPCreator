@@ -4,30 +4,30 @@ import static builder.TagProperty.*;
 import static builder.TagType.*;
 
 /**
- * HTML‚ğ\’z‚·‚éƒrƒ‹ƒ_[ƒNƒ‰ƒX<br>
- * ˆÈ‰º‚Ì‚æ‚¤‚É‚µ‚ÄHTMLŒ`®•¶š—ñ‚ğƒƒ\ƒbƒh‚Åì¬‚Å‚«‚Ü‚·B<br><br>
+ * HTMLã‚’æ§‹ç¯‰ã™ã‚‹ãƒ“ãƒ«ãƒ€ãƒ¼ã‚¯ãƒ©ã‚¹<br>
+ * ä»¥ä¸‹ã®ã‚ˆã†ã«ã—ã¦HTMLå½¢å¼æ–‡å­—åˆ—ã‚’ãƒ¡ã‚½ãƒƒãƒ‰ã§ä½œæˆã§ãã¾ã™ã€‚<br><br>
  * {@code new SimpleHtmlBuilder.html().head().title("Sample")._head()
  * .body().line("HelloWorld")._body()._html();}<br>
- * ‚±‚ê‚É‚æ‚èì¬‚³‚ê‚éHTMLŒ`®•¶š—ñ‚ÍˆÈ‰º‚Å‚·B<br>
+ * ã“ã‚Œã«ã‚ˆã‚Šä½œæˆã•ã‚Œã‚‹HTMLå½¢å¼æ–‡å­—åˆ—ã¯ä»¥ä¸‹ã§ã™ã€‚<br>
  * {@code <html><head><title>Sample</title></head><body>HelloWorld</body></html>}
  */
 public class SimpleHtmlBuilder {
 
-    /** o—Í—pHTMLŒ`®•¶š—ñ */
+  /** å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ— */
     private final StringBuilder sb = new StringBuilder();
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É•¶š—ñ‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @param str ’Ç‰Á‚·‚é•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«æ–‡å­—åˆ—ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @param str è¿½åŠ ã™ã‚‹æ–‡å­—åˆ—
      */
     private void append(String str) {
         sb.append(str);
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚Éˆø”‚Éw’è‚µ‚½o—Í—pHTMLŒ`®•¶š—ñ‚ğŒ‹‡‚µ‚Ü‚·B
-     * @param builder o—Í—pHTMLŒ`®•¶š—ñ
-     * @return Œ‹‡Œã‚Ìo—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«å¼•æ•°ã«æŒ‡å®šã—ãŸå‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã‚’çµåˆã—ã¾ã™ã€‚
+     * @param builder å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
+     * @return çµåˆå¾Œã®å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder append(SimpleHtmlBuilder builder) {
         append(builder.toString());
@@ -35,17 +35,17 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É•¶š—ñ‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @param str ’Ç‰Á‚·‚é•¶š—ñ
-     * @return •¶š—ñ‚ª’Ç‰Á‚³‚ê‚½o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«æ–‡å­—åˆ—ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @param str è¿½åŠ ã™ã‚‹æ–‡å­—åˆ—
+     * @return æ–‡å­—åˆ—ãŒè¿½åŠ ã•ã‚ŒãŸå‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder line(String str) {
         append(str);
         return this;
     }
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚ğ‰üs‚µ‚Ü‚·B
-     * @return ‰üs‹L†‚ª’Ç‰Á‚³‚ê‚½o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã‚’æ”¹è¡Œã—ã¾ã™ã€‚
+     * @return æ”¹è¡Œè¨˜å·ãŒè¿½åŠ ã•ã‚ŒãŸå‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder newline() {
     	String lineCd = System.getProperty("line.separator");
@@ -54,13 +54,13 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚Éƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * tag‚Í{@link TagType}‚Åw’è‚µ‚Ü‚·B<br>
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * tagã¯{@link TagType}ã§æŒ‡å®šã—ã¾ã™ã€‚<br>
      * <br>
-     * —áFHTML, _HTML, BODY, _BODY‚È‚Ç<br>
-     * HTML, _HTML‚Í‚»‚ê‚¼‚ê{@code <html>, </html>}‚É‘Î‰‚µ‚Ü‚·B
-     * @param tag ’Ç‰Á‚·‚éƒ^ƒO‚Ìí—Ş
-     * @return ƒ^ƒO‚ª’Ç‰Á‚³‚ê‚½o—Í—pHTMLŒ`®•¶š—ñ
+     * ä¾‹ï¼šHTML, _HTML, BODY, _BODYãªã©<br>
+     * HTML, _HTMLã¯ãã‚Œãã‚Œ{@code <html>, </html>}ã«å¯¾å¿œã—ã¾ã™ã€‚
+     * @param tag è¿½åŠ ã™ã‚‹ã‚¿ã‚°ã®ç¨®é¡
+     * @return ã‚¿ã‚°ãŒè¿½åŠ ã•ã‚ŒãŸå‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tag(TagType tag) {
         append(tag.toString());
@@ -68,10 +68,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚Éƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * tag‚Í{@code "<html>"}‚Ì‚æ‚¤‚Éw’è‚µ‚Ü‚·B<br>
-     * @param tag ’Ç‰Á‚·‚éƒ^ƒO‚Ì•¶š—ñ
-     * @return ƒ^ƒO‚ª’Ç‰Á‚³‚ê‚½o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * tagã¯{@code "<html>"}ã®ã‚ˆã†ã«æŒ‡å®šã—ã¾ã™ã€‚<br>
+     * @param tag è¿½åŠ ã™ã‚‹ã‚¿ã‚°ã®æ–‡å­—åˆ—
+     * @return ã‚¿ã‚°ãŒè¿½åŠ ã•ã‚ŒãŸå‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tag(String tag) {
         append(tag);
@@ -79,15 +79,15 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚Éƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * tag‚Í{@link TagType}‚Åw’è‚µ‚Ü‚·B<br>
-     * ‚Ü‚½Aˆø”‚ÉƒvƒƒpƒeƒB‚ğæ‚èAƒ^ƒO“à‚ÉƒvƒƒpƒeƒB‚ğ‹Lq‚µ‚Ü‚·B
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * tagã¯{@link TagType}ã§æŒ‡å®šã—ã¾ã™ã€‚<br>
+     * ã¾ãŸã€å¼•æ•°ã«ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å–ã‚Šã€ã‚¿ã‚°å†…ã«ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è¨˜è¿°ã—ã¾ã™ã€‚
      * <br>
-     * —áFtag=TABLE, property={key:border, value:1}‚Ìê‡A<br>
-     * {@code <table border="1">}‚Ì‚æ‚¤‚Èƒ^ƒO‚ª’Ç‰Á‚³‚ê‚Ü‚·B
-     * @param tag ’Ç‰Á‚·‚éƒ^ƒO‚Ìí—Ş
-     * @param property ƒ^ƒO‚É‹Lq‚·‚éƒvƒƒpƒeƒB
-     * @return ƒ^ƒO‚ª’Ç‰Á‚³‚ê‚½o—Í—pHTMLŒ`®•¶š—ñ
+     * ä¾‹ï¼štag=TABLE, property={key:border, value:1}ã®å ´åˆã€<br>
+     * {@code <table border="1">}ã®ã‚ˆã†ãªã‚¿ã‚°ãŒè¿½åŠ ã•ã‚Œã¾ã™ã€‚
+     * @param tag è¿½åŠ ã™ã‚‹ã‚¿ã‚°ã®ç¨®é¡
+     * @param property ã‚¿ã‚°ã«è¨˜è¿°ã™ã‚‹ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
+     * @return ã‚¿ã‚°ãŒè¿½åŠ ã•ã‚ŒãŸå‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tag(TagType tag, TagPropertyMap<?> property) {
         StringBuilder sb = new StringBuilder(tag.toString());
@@ -98,19 +98,19 @@ public class SimpleHtmlBuilder {
         append(sb.toString());
         return this;
     }
-    
+
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚Éƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * tag‚Í{@link TagType}‚Åw’è‚µ‚Ü‚·B<br>
-     * ‚Ü‚½Aˆø”‚ÉƒvƒƒpƒeƒB‚ğæ‚èAƒ^ƒO“à‚ÉƒvƒƒpƒeƒB‚ğ‹Lq‚µ‚Ü‚·B<br>
-     * ƒvƒƒpƒeƒB‚Í id="div1" name="sample" ‚Ì‚æ‚¤‚ÈŠ®‘S‚ÈƒvƒƒpƒeƒB•¶š—ñ‚Åw’è‚µ‚Ü‚·B<br>
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * tagã¯{@link TagType}ã§æŒ‡å®šã—ã¾ã™ã€‚<br>
+     * ã¾ãŸã€å¼•æ•°ã«ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’å–ã‚Šã€ã‚¿ã‚°å†…ã«ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è¨˜è¿°ã—ã¾ã™ã€‚<br>
+     * ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã¯ id="div1" name="sample" ã®ã‚ˆã†ãªå®Œå…¨ãªãƒ—ãƒ­ãƒ‘ãƒ†ã‚£æ–‡å­—åˆ—ã§æŒ‡å®šã—ã¾ã™ã€‚<br>
      * <br>
-     * —áFtag=TABLE, property="border="1""‚Ìê‡A<br>
-     * {@code <table border="1">}‚Ì‚æ‚¤‚Èƒ^ƒO‚ª’Ç‰Á‚³‚ê‚Ü‚·B
-     * @param tag ’Ç‰Á‚·‚éƒ^ƒO‚Ìí—Ş
-     * @param property ƒ^ƒO‚É‹Lq‚·‚éƒvƒƒpƒeƒB
-     * @return ƒ^ƒO‚ª’Ç‰Á‚³‚ê‚½o—Í—pHTMLŒ`®•¶š—ñ
+     * ä¾‹ï¼štag=TABLE, property="border="1""ã®å ´åˆã€<br>
+     * {@code <table border="1">}ã®ã‚ˆã†ãªã‚¿ã‚°ãŒè¿½åŠ ã•ã‚Œã¾ã™ã€‚
+     * @param tag è¿½åŠ ã™ã‚‹ã‚¿ã‚°ã®ç¨®é¡
+     * @param property ã‚¿ã‚°ã«è¨˜è¿°ã™ã‚‹ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
+     * @return ã‚¿ã‚°ãŒè¿½åŠ ã•ã‚ŒãŸå‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tag(TagType tag, String property) {
         StringBuilder sb = new StringBuilder(tag.toString());
@@ -123,8 +123,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <html>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <html>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder html() {
         tag(HTML);
@@ -132,8 +132,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </html>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </html>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _html() {
         tag(_HTML);
@@ -141,8 +141,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <main>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <main>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder main() {
         tag(MAIN);
@@ -150,8 +150,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </main>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </main>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _main() {
         tag(_MAIN);
@@ -159,18 +159,18 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <div>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <div>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder div() {
         tag(DIV);
         return this;
     }
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <table border="X">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * X‚É‚Íˆø”‚Åw’è‚µ‚½border‚Ì’l‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param border ƒe[ƒuƒ‹‚Ìborderƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <table border="X">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * Xã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸborderã®å€¤ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param border ãƒ†ãƒ¼ãƒ–ãƒ«ã®borderãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder div(String align) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -181,8 +181,8 @@ public class SimpleHtmlBuilder {
 
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </div>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </div>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _div() {
         tag(_DIV);
@@ -190,10 +190,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <meta charset="XXX">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * XXX‚É‚Íˆø”charset‚Åw’è‚µ‚½•¶šƒGƒ“ƒR[ƒh‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param charset •¶šƒGƒ“ƒR[ƒh
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <meta charset="XXX">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * XXXã«ã¯å¼•æ•°charsetã§æŒ‡å®šã—ãŸæ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param charset æ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‰
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder meta(String charset) {
         tag(META);
@@ -204,8 +204,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <head>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <head>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder head() {
         tag(HEAD);
@@ -213,8 +213,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </head>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </head>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _head() {
         tag(_HEAD);
@@ -222,10 +222,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <title>XXX</title>}‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * XXX‚É‚Íˆø”‚Åw’è‚µ‚½ƒ^ƒCƒgƒ‹‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param title ƒ^ƒCƒgƒ‹
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <title>XXX</title>}ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * XXXã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸã‚¿ã‚¤ãƒˆãƒ«ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param title ã‚¿ã‚¤ãƒˆãƒ«
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder title(String title) {
         tag(TITLE);
@@ -234,10 +234,10 @@ public class SimpleHtmlBuilder {
         return this;
     }
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <h1>XXX</h1>}‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * XXX‚É‚Íˆø”‚Åw’è‚µ‚½ƒ^ƒCƒgƒ‹‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param h1 ‹­’²
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <h1>XXX</h1>}ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * XXXã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸã‚¿ã‚¤ãƒˆãƒ«ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param h1 å¼·èª¿
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder H1(String h1) {
         tag(H1);
@@ -247,10 +247,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <h2>XXX</h2>}‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * XXX‚É‚Íˆø”‚Åw’è‚µ‚½ƒ^ƒCƒgƒ‹‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param h2 ‹­’²
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <h2>XXX</h2>}ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * XXXã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸã‚¿ã‚¤ãƒˆãƒ«ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param h2 å¼·èª¿
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder H2(String h2) {
         tag(H2);
@@ -260,10 +260,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <h3>XXX</h3>}‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * XXX‚É‚Íˆø”‚Åw’è‚µ‚½ƒ^ƒCƒgƒ‹‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param h3 ‹­’²
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <h3>XXX</h3>}ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * XXXã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸã‚¿ã‚¤ãƒˆãƒ«ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param h3 å¼·èª¿
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder H3(String h3) {
         tag(H3);
@@ -273,10 +273,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <caption>XXX</caption>}‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * XXX‚É‚Íˆø”‚Åw’è‚µ‚½ƒ^ƒCƒgƒ‹‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param caption ƒLƒƒƒvƒVƒ‡ƒ“
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <caption>XXX</caption>}ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * XXXã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸã‚¿ã‚¤ãƒˆãƒ«ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param caption ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder caption(String caption) {
         tag(CAPTION);
@@ -286,8 +286,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <body>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <body>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder body() {
         tag(BODY);
@@ -295,8 +295,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </body>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </body>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _body() {
         tag(_BODY);
@@ -304,10 +304,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <table border="X">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * X‚É‚Íˆø”‚Åw’è‚µ‚½border‚Ì’l‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param border ƒe[ƒuƒ‹‚Ìborderƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <table border="X">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * Xã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸborderã®å€¤ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param border ãƒ†ãƒ¼ãƒ–ãƒ«ã®borderãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder table(int border) {
         TagPropertyMap<Integer> property = new TagPropertyMap<>();
@@ -317,10 +317,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <table border="X">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * X‚É‚Íˆø”‚Åw’è‚µ‚½border‚Ì’l‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param border ƒe[ƒuƒ‹‚Ìborderƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <table border="X">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * Xã«ã¯å¼•æ•°ã§æŒ‡å®šã—ãŸborderã®å€¤ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param border ãƒ†ãƒ¼ãƒ–ãƒ«ã®borderãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder table(String className) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -330,17 +330,17 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </table>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </table>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _table() {
         tag(_TABLE);
         return this;
     }
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <thead>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <thead>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder thead() {
         tag(THEAD);
@@ -348,16 +348,16 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </thead>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </thead>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _thead() {
         tag(_THEAD);
         return this;
     }
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <tfoot>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <tfoot>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tfoot() {
         tag(TFOOT);
@@ -365,8 +365,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </tfoot>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </tfoot>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _tfoot() {
         tag(_TFOOT);
@@ -374,11 +374,11 @@ public class SimpleHtmlBuilder {
     }
 
 
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <th class="">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @param className classƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <th class="">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @param className classãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder th(String className) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -387,10 +387,10 @@ public class SimpleHtmlBuilder {
         return this;
     }
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <th class=""></th>}ƒ^ƒO‚ÅˆÍ‚Ü‚ê‚½•¶š—ñ‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @param className classƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @param line thƒ^ƒO‚ÅˆÍ‚Ş•¶š—ñ
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <th class=""></th>}ã‚¿ã‚°ã§å›²ã¾ã‚ŒãŸæ–‡å­—åˆ—ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @param className classãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @param line thã‚¿ã‚°ã§å›²ã‚€æ–‡å­—åˆ—
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder th(String className, String line) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -402,9 +402,9 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <th colspan="X">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * @param colspan colspanƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <th colspan="X">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * @param colspan colspanãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder th(int colspan) {
         TagPropertyMap<Integer> property = new TagPropertyMap<>();
@@ -413,10 +413,10 @@ public class SimpleHtmlBuilder {
         return this;
     }
 
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </th>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </th>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _th() {
         tag(_TH);
@@ -424,10 +424,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <tr>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * ˆø”‚É•¶š—ñ‚ğ—^‚¦‚é‚ÆA‚»‚Ì•¶š—ñ‚ğŠi”[‚µ‚½s‚ğì¬‚µ‚Ü‚·B<br>
-     * —áFˆø”‚É"a", "b", "c"‚ğ—^‚¦‚½ê‡F{@code <tr><td>a</td><td>b</td><td>c</td></tr>}
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <tr>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * å¼•æ•°ã«æ–‡å­—åˆ—ã‚’ä¸ãˆã‚‹ã¨ã€ãã®æ–‡å­—åˆ—ã‚’æ ¼ç´ã—ãŸè¡Œã‚’ä½œæˆã—ã¾ã™ã€‚<br>
+     * ä¾‹ï¼šå¼•æ•°ã«"a", "b", "c"ã‚’ä¸ãˆãŸå ´åˆï¼š{@code <tr><td>a</td><td>b</td><td>c</td></tr>}
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tr(String... rows) {
         tag(TR);
@@ -439,9 +439,9 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <tr></tr>}ƒ^ƒO‚ÅˆÍ‚Ü‚ê‚½•¶š—ñ‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @param line trƒ^ƒO‚ÅˆÍ‚Ş•¶š—ñ
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <tr></tr>}ã‚¿ã‚°ã§å›²ã¾ã‚ŒãŸæ–‡å­—åˆ—ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @param line trã‚¿ã‚°ã§å›²ã‚€æ–‡å­—åˆ—
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tr(String line) {
         tag(TR);
@@ -450,10 +450,10 @@ public class SimpleHtmlBuilder {
         return this;
     }
 
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <tr>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <tr>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder tr() {
         tag(TR);
@@ -461,8 +461,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </tr>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </tr>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _tr() {
         tag(_TR);
@@ -470,10 +470,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <td>XXX</td>}‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * XXX‚É‚Íˆø”‚Å—^‚¦‚½•¶š—ñ‚ª‹Lq‚³‚ê‚Ü‚·B
-     * @param str •¶š—ñ
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <td>XXX</td>}ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * XXXã«ã¯å¼•æ•°ã§ä¸ãˆãŸæ–‡å­—åˆ—ãŒè¨˜è¿°ã•ã‚Œã¾ã™ã€‚
+     * @param str æ–‡å­—åˆ—
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder td(String str) {
         tag(TD);
@@ -483,8 +483,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <td>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <td>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder td() {
         tag(TD);
@@ -492,18 +492,18 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </td>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </td>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _td() {
         tag(_TD);
         return this;
     }
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <span class="X">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * @param className class‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <span class="X">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * @param className classã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder span(String className) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -511,10 +511,10 @@ public class SimpleHtmlBuilder {
         tag(SPAN, property);
         return this;
     }
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </span>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </span>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _span() {
         tag(_SPAN);
@@ -523,18 +523,18 @@ public class SimpleHtmlBuilder {
 
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <br>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <br>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder br() {
         tag(BR);
         return this;
     }
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <p id="X">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * @param id id‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <p id="X">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * @param id idã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder p(String id) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -542,10 +542,10 @@ public class SimpleHtmlBuilder {
         tag(P, property);
         return this;
     }
-    
+
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </p>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </p>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _p() {
         tag(_P);
@@ -554,9 +554,9 @@ public class SimpleHtmlBuilder {
 
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <a href="X">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * @param href ƒe[ƒuƒ‹‚Ìhrefƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <a href="X">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * @param href ãƒ†ãƒ¼ãƒ–ãƒ«ã®hrefãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder a(String href) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -566,10 +566,10 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code <a class="X" href="Y">}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B<br>
-     * @param className classƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @param href hrefƒpƒ‰ƒ[ƒ^‚É—^‚¦‚é’l
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code <a class="X" href="Y">}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚<br>
+     * @param className classãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @param href hrefãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«ä¸ãˆã‚‹å€¤
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder a(String className, String href) {
         TagPropertyMap<String> property = new TagPropertyMap<>();
@@ -580,8 +580,8 @@ public class SimpleHtmlBuilder {
     }
 
     /**
-     * o—Í—pHTMLŒ`®•¶š—ñ‚É{@code </p>}ƒ^ƒO‚ğ’Ç‰Á‚µ‚Ü‚·B
-     * @return o—Í—pHTMLŒ`®•¶š—ñ
+     * å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—ã«{@code </p>}ã‚¿ã‚°ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+     * @return å‡ºåŠ›ç”¨HTMLå½¢å¼æ–‡å­—åˆ—
      */
     public SimpleHtmlBuilder _a() {
         tag(_A);

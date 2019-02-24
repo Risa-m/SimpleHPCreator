@@ -13,18 +13,18 @@ import java.util.ArrayList;
 import builder.SimpleHtmlBuilder;
 
 /**
- * 
+ *
  * @author Risa
- * ‡Œ‹‰Ê‚ÌHTML‚Ì‘g‚İ—§‚Ä‚ğs‚¤ƒNƒ‰ƒX
+ * è©¦åˆçµæœã®HTMLã®çµ„ã¿ç«‹ã¦ã‚’è¡Œã†ã‚¯ãƒ©ã‚¹
  */
 public class HTMLCreator {
 	private DataSet dataset;
 	private String headerfile, footerfile;
 	/**
-	 * 
-	 * @param headerfile@¶¬‚·‚éHTMLƒtƒ@ƒCƒ‹‚Ìƒwƒbƒ_[î•ñ
-	 * @param footerfile@¶¬‚·‚éHTMLƒtƒ@ƒCƒ‹‚Ìƒtƒbƒ^[î•ñ
-	 * @param dataset ‡Œ‹‰Êî•ñ
+	 *
+	 * @param headerfileã€€ç”Ÿæˆã™ã‚‹HTMLãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ˜ãƒƒãƒ€ãƒ¼æƒ…å ±
+	 * @param footerfileã€€ç”Ÿæˆã™ã‚‹HTMLãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ãƒƒã‚¿ãƒ¼æƒ…å ±
+	 * @param dataset è©¦åˆçµæœæƒ…å ±
 	 */
 	public HTMLCreator(String headerfile, String footerfile, DataSet dataset) {
 		this.dataset = dataset;
@@ -33,16 +33,16 @@ public class HTMLCreator {
 	}
 
 	/**
-	 * 
-	 * @param dataset@‡Œ‹‰Êî•ñ
+	 *
+	 * @param datasetã€€è©¦åˆçµæœæƒ…å ±
 	 */
 	public HTMLCreator(DataSet dataset) {
 		this.dataset = dataset;
 	}
 
 	/**
-	 * ‡Œ‹‰Êi’c‘Ìíj‚ÌHTMLƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚éB
-	 * @return HTML‚ª¶¬‚Å‚«‚½‚©”Û‚©
+	 * è©¦åˆçµæœï¼ˆå›£ä½“æˆ¦ï¼‰ã®HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @return HTMLãŒç”Ÿæˆã§ããŸã‹å¦ã‹
 	 */
 	public boolean create() {
 		File outFile = new File(dataset.getDate()+((dataset.getFormat()==dataset.BOYS)?"m":(dataset.getFormat()==dataset.GIRLS)?"w":"")+".html");
@@ -65,7 +65,7 @@ public class HTMLCreator {
 					bw.write(str);
 					bw.newLine();
 				}
-				
+
 				bw.write(mainHeader().toString());
 				bw.newLine();
 				bw.write(createOwnTable().toString());
@@ -73,7 +73,7 @@ public class HTMLCreator {
 				bw.write(createOpponentTable().toString());
 				bw.newLine();
 				bw.write(mainFooter().toString());
-				
+
 				while ((str = footbr.readLine()) != null) {
 					bw.write(str);
 					bw.newLine();
@@ -81,20 +81,20 @@ public class HTMLCreator {
 				bw.close();
 				headbr.close();
 				footbr.close();
-				System.out.println("‘‚«‚İ‚Ü‚µ‚½B");
+				System.out.println("æ›¸ãè¾¼ã¿ã¾ã—ãŸã€‚");
 				return true;
 			} catch (IOException e) {
 				e.printStackTrace();
 				return false;
 			}
 /*		} else {
-			System.out.println("ƒtƒ@ƒCƒ‹‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB");
+			System.out.println("ãƒ•ã‚¡ã‚¤ãƒ«ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚");
 			return false;
 		}*/
 	}
 	/**
-	 * ‡Œ‹‰ÊiŒÂlíj‚ÌHTMLƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚éB
-	 * @return HTMLƒtƒ@ƒCƒ‹‚ğ¶¬‚Å‚«‚½‚©”Û‚©
+	 * è©¦åˆçµæœï¼ˆå€‹äººæˆ¦ï¼‰ã®HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @return HTMLãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã§ããŸã‹å¦ã‹
 	 */
 	public boolean createi() {
 		File outFile = new File(dataset.getDate()+"i.html");
@@ -110,13 +110,13 @@ public class HTMLCreator {
 					bw.write(str);
 					bw.newLine();
 				}
-				
+
 				bw.write(mainHeader().toString());
 				bw.newLine();
 				bw.write(createITable().toString());
 				bw.newLine();
 				bw.write(mainFooter().toString());
-				
+
 				while ((str = footbr.readLine()) != null) {
 					bw.write(str);
 					bw.newLine();
@@ -124,7 +124,7 @@ public class HTMLCreator {
 				bw.close();
 				headbr.close();
 				footbr.close();
-				System.out.println("‘‚«‚İ‚Ü‚µ‚½B");
+				System.out.println("æ›¸ãè¾¼ã¿ã¾ã—ãŸã€‚");
 				return true;
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -133,7 +133,7 @@ public class HTMLCreator {
 	}
 
 	/**
-	 * HTML‚Ìmain•”•ª‚Ìƒwƒbƒ_[‚Ì¶¬‚ğ‚·‚éB
+	 * HTMLã®mainéƒ¨åˆ†ã®ãƒ˜ãƒƒãƒ€ãƒ¼ã®ç”Ÿæˆã‚’ã™ã‚‹ã€‚
 	 */
 	public SimpleHtmlBuilder mainHeader() {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
@@ -141,28 +141,28 @@ public class HTMLCreator {
         builder
             .main()
             .newline()
-            	.a("../../scores/index.html").line("‡Œ‹‰Ê")._a()
+            	.a("../../scores/index.html").line("è©¦åˆçµæœ")._a()
             	.line(" &gt; ")
             	.a((thisYear - (dataset.getYear()/100)*100)+"top.html")
-            	.line(thisYear+"”N“x")._a()
+            	.line(thisYear+"å¹´åº¦")._a()
             	.line(" &gt; ")
-            	.line("‘Î"+dataset.getOpponent()+"—ûK‡")
+            	.line("å¯¾"+dataset.getOpponent()+"ç·´ç¿’è©¦åˆ")
             	.newline()
-            	.H2("‘Î"+dataset.getOpponent()+"—ûK‡")
+            	.H2("å¯¾"+dataset.getOpponent()+"ç·´ç¿’è©¦åˆ")
             	.newline()
             	.H3(dataset.getYear()+"."+dataset.getMonth()+"."+dataset.getDay()+"@"+dataset.getPlace());
         return builder;
 	}
 	/**
-	 * HTML‚Ìmain•”•ª‚Ìƒtƒbƒ^[‚Ì¶¬‚ğ‚·‚éB
+	 * HTMLã®mainéƒ¨åˆ†ã®ãƒ•ãƒƒã‚¿ãƒ¼ã®ç”Ÿæˆã‚’ã™ã‚‹ã€‚
 	 */
 	public SimpleHtmlBuilder mainFooter() {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
 		if(dataset.getFormat() != dataset.INDIVIDUAL) {
 	        builder
         	.p("gameresult")
-        	.line((dataset.getScoreSum1()>dataset.getScoreSum2())?"‹“s‘åŠw‚ÌŸ‚¿"
-        			:(dataset.getScoreSum1()<dataset.getScoreSum2()?"‹“s‘åŠw‚Ì•‰‚¯":"ˆø‚«•ª‚¯"))
+        	.line((dataset.getScoreSum1()>dataset.getScoreSum2())?"äº¬éƒ½å¤§å­¦ã®å‹ã¡"
+        			:(dataset.getScoreSum1()<dataset.getScoreSum2()?"äº¬éƒ½å¤§å­¦ã®è² ã‘":"å¼•ãåˆ†ã‘"))
         	._p().newline();
 		}
 	        builder
@@ -175,23 +175,23 @@ public class HTMLCreator {
         return builder;
 	}
 	/**
-	 * ‡Œ‹‰Êƒe[ƒuƒ‹i©Zj
-	 * @return ‡Œ‹‰Êƒe[ƒuƒ‹i©Zj‚Ìbuilder
+	 * è©¦åˆçµæœãƒ†ãƒ¼ãƒ–ãƒ«ï¼ˆè‡ªæ ¡ï¼‰
+	 * @return è©¦åˆçµæœãƒ†ãƒ¼ãƒ–ãƒ«ï¼ˆè‡ªæ ¡ï¼‰ã®builder
 	 */
 	public SimpleHtmlBuilder createOwnTable() {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
         builder
                 .table("scoretable")
                 .newline()
-                	.caption("‹“s‘åŠw").newline()
+                	.caption("äº¬éƒ½å¤§å­¦").newline()
                 	.thead().newline()
-                	.tr().th("targetnum","“I").newline()
-                	.th("name", "–¼").newline()
-                	.th("year", "Šw”N").newline()
+                	.tr().th("targetnum","çš„").newline()
+                	.th("name", "æ°å").newline()
+                	.th("year", "å­¦å¹´").newline()
                 	.th("dist50", "50m").newline()
                 	.th("dist30", "30m").newline()
                 	.th("total", "Total").newline()
-                	.th("remark", "”õl“™")
+                	.th("remark", "å‚™è€ƒç­‰")
                 	._tr()._thead()
                 		.append(rows(dataset.getMember1()))
                 	.tfoot()
@@ -203,8 +203,8 @@ public class HTMLCreator {
 	}
 
 	/**
-	 * ‡Œ‹‰Êƒe[ƒuƒ‹iŒÂlíj
-	 * @return ‡Œ‹‰Êƒe[ƒuƒ‹iŒÂlíj‚Ìbuilder
+	 * è©¦åˆçµæœãƒ†ãƒ¼ãƒ–ãƒ«ï¼ˆå€‹äººæˆ¦ï¼‰
+	 * @return è©¦åˆçµæœãƒ†ãƒ¼ãƒ–ãƒ«ï¼ˆå€‹äººæˆ¦ï¼‰ã®builder
 	 */
 	public SimpleHtmlBuilder createITable() {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
@@ -212,12 +212,12 @@ public class HTMLCreator {
                 .table("iscoretable")
                 .newline()
                 	.thead().newline()
-                	.tr().th("name", "–¼").newline()
-                	.th("year", "Šw”N").newline()
+                	.tr().th("name", "æ°å").newline()
+                	.th("year", "å­¦å¹´").newline()
                 	.th("dist50", "50m").newline()
                 	.th("dist30", "30m").newline()
                 	.th("total", "Total").newline()
-                	.th("remark", "”õl“™")
+                	.th("remark", "å‚™è€ƒç­‰")
                 	._tr()._thead()
                 		.append(rows(dataset.getMember1()))
                 	._table();
@@ -225,9 +225,9 @@ public class HTMLCreator {
 	}
 
 	/**
-	 * ‡Œ‹‰Êƒe[ƒuƒ‹‚ÌŠes‚ğ¶¬‚·‚éB
-	 * @param members ƒe[ƒuƒ‹‚É•\¦‚·‚éî•ñ
-	 * @return ¶¬‚µ‚½builder
+	 * è©¦åˆçµæœãƒ†ãƒ¼ãƒ–ãƒ«ã®å„è¡Œã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param members ãƒ†ãƒ¼ãƒ–ãƒ«ã«è¡¨ç¤ºã™ã‚‹æƒ…å ±
+	 * @return ç”Ÿæˆã—ãŸbuilder
 	 */
 	public SimpleHtmlBuilder rows(ArrayList<Member> members) {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
@@ -255,10 +255,10 @@ public class HTMLCreator {
 		return builder;
 	}
 	/**
-	 * flag‚ªtrue‚Ìê‡A“ü—Í‚³‚ê‚½•¶š—ñ‚ğÔš‚É•Ï‚¦‚éƒ^ƒO‚ğ¶¬‚·‚éB
-	 * @param flag Ôš‚É‚·‚é‚©‚Ç‚¤‚©
-	 * @param s Ôš‚É•Ï‚¦‚é•¶š—ñ
-	 * @return ¶¬‚µ‚½builder
+	 * flagãŒtrueã®å ´åˆã€å…¥åŠ›ã•ã‚ŒãŸæ–‡å­—åˆ—ã‚’èµ¤å­—ã«å¤‰ãˆã‚‹ã‚¿ã‚°ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @param flag èµ¤å­—ã«ã™ã‚‹ã‹ã©ã†ã‹
+	 * @param s èµ¤å­—ã«å¤‰ãˆã‚‹æ–‡å­—åˆ—
+	 * @return ç”Ÿæˆã—ãŸbuilder
 	 */
 	public SimpleHtmlBuilder redMark(boolean flag, String s) {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
@@ -274,8 +274,8 @@ public class HTMLCreator {
 	}
 
 	/**
-	 * ‡Œ‹‰Êƒe[ƒuƒ‹i‘ŠèZj‚ğ¶¬‚·‚éB
-	 * @return ¶¬‚³‚ê‚½builder
+	 * è©¦åˆçµæœãƒ†ãƒ¼ãƒ–ãƒ«ï¼ˆç›¸æ‰‹æ ¡ï¼‰ã‚’ç”Ÿæˆã™ã‚‹ã€‚
+	 * @return ç”Ÿæˆã•ã‚ŒãŸbuilder
 	 */
 	public SimpleHtmlBuilder createOpponentTable() {
 		SimpleHtmlBuilder builder = new SimpleHtmlBuilder();
@@ -284,13 +284,13 @@ public class HTMLCreator {
                 .newline()
                 	.caption(dataset.getOpponent()).newline()
                 	.thead().newline()
-                	.tr().th("targetnum","“I").newline()
-                	.th("name", "–¼").newline()
-                	.th("year", "Šw”N").newline()
+                	.tr().th("targetnum","çš„").newline()
+                	.th("name", "æ°å").newline()
+                	.th("year", "å­¦å¹´").newline()
                 	.th("dist50", "50m").newline()
                 	.th("dist30", "30m").newline()
                 	.th("total", "Total").newline()
-                	.th("remark", "”õl“™")
+                	.th("remark", "å‚™è€ƒç­‰")
                 	._tr()._thead()
                 		.append(rows(dataset.getMember2()))
                 	.tfoot()

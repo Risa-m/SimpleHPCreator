@@ -1,7 +1,7 @@
 package construction;
 
 /**
- * ‘Ièî•ñ‚ğİ’è‚·‚éƒNƒ‰ƒX
+ * é¸æ‰‹æƒ…å ±ã‚’è¨­å®šã™ã‚‹ã‚¯ãƒ©ã‚¹
  * @author Risa
  *
  */
@@ -11,12 +11,12 @@ public class Member {
 	private String name, remark;
 	private boolean open;
 	/**
-	 * 
-	 * @param name –¼‘O
-	 * @param grade Šw”N
+	 *
+	 * @param name åå‰
+	 * @param grade å­¦å¹´
 	 * @param score1 50m
 	 * @param score2 30m
-	 * @param remark ”õl“™
+	 * @param remark å‚™è€ƒç­‰
 	 */
 	public Member(String name, String grade, String score1, String score2, String total,  String remark){
 		this.name = name;
@@ -25,83 +25,83 @@ public class Member {
 		this.score2 = score2;
 		this.total = total;
 		this.remark = remark;
-		if(remark.equals("ƒI[ƒvƒ“")) {
+		if(remark.equals("ã‚ªãƒ¼ãƒ—ãƒ³")) {
 			open = true;
 			this.remark = "";
 		}
 		else open = false;
 	}
 	/**
-	 * ‘Iè‚Ì–¼‘O‚ğæ“¾‚·‚é
-	 * @return ‘Iè–¼
+	 * é¸æ‰‹ã®åå‰ã‚’å–å¾—ã™ã‚‹
+	 * @return é¸æ‰‹å
 	 */
 	public String getName() {
 		return name;
 	}
 	/**
-	 * ‘Iè‚ÌŠw”N‚ğæ“¾‚·‚éB
-	 * @return Šw”N
+	 * é¸æ‰‹ã®å­¦å¹´ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å­¦å¹´
 	 */
 	public String getGrade() {
 		return grade;
 	}
 	/**
-	 * ‘Iè‚Ìˆê‚Â–Ú‚Ì“¾“_‚ğæ“¾‚·‚éB
-	 * @return ˆê‚Â–Ú‚Ì“¾“_
+	 * é¸æ‰‹ã®ä¸€ã¤ç›®ã®å¾—ç‚¹ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return ä¸€ã¤ç›®ã®å¾—ç‚¹
 	 */
 	public String getScore1() {
 		return score1;
 	}
 	/**
-	 * ‘Iè‚Ìˆê‚Â–Ú‚Ì“¾“_‚ğString‚©‚çint‚É•ÏŠ·‚·‚éB
-	 * @return ˆê‚Â–Ú‚Ì“¾“_
+	 * é¸æ‰‹ã®ä¸€ã¤ç›®ã®å¾—ç‚¹ã‚’Stringã‹ã‚‰intã«å¤‰æ›ã™ã‚‹ã€‚
+	 * @return ä¸€ã¤ç›®ã®å¾—ç‚¹
 	 */
 	public int getScore1Num() {
 		return StringToInt(score1);
 	}
 	/**
-	 * ‘Iè‚Ì“ñ‚Â–Ú‚Ì“¾“_‚ğæ“¾‚·‚éB
-	 * @return “ñ‚Â–Ú‚Ì“¾“_
+	 * é¸æ‰‹ã®äºŒã¤ç›®ã®å¾—ç‚¹ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return äºŒã¤ç›®ã®å¾—ç‚¹
 	 */
 	public String getScore2() {
 		return score2;
 	}
 	/**
-	 * ‘Iè‚Ì“ñ‚Â–Ú‚Ì“¾“_‚ğString‚©‚çint‚É•ÏŠ·‚·‚éB
-	 * @return “ñ‚Â–Ú‚Ì“¾“_
+	 * é¸æ‰‹ã®äºŒã¤ç›®ã®å¾—ç‚¹ã‚’Stringã‹ã‚‰intã«å¤‰æ›ã™ã‚‹ã€‚
+	 * @return äºŒã¤ç›®ã®å¾—ç‚¹
 	 */
 	public int getScore2Num() {
 		return StringToInt(score2);
 	}
 	/**
-	 * ‘Iè‚Ì‡Œv“_‚ğæ“¾‚·‚éB
-	 * @return ‡Œv“_
+	 * é¸æ‰‹ã®åˆè¨ˆç‚¹ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return åˆè¨ˆç‚¹
 	 */
 	public String getTotal() {
 		return total;
 	}
 	/**
-	 * ‘Iè‚Ì‡Œv“_‚ğString‚©‚çint‚É•ÏŠ·‚·‚éB
-	 * @return ‡Œv“_
+	 * é¸æ‰‹ã®åˆè¨ˆç‚¹ã‚’Stringã‹ã‚‰intã«å¤‰æ›ã™ã‚‹ã€‚
+	 * @return åˆè¨ˆç‚¹
 	 */
 	public int getTotalNum() {
 		return StringToInt(total);
 	}
 	/**
-	 * ”õl‚ğæ“¾‚·‚éB
-	 * @return ”õl
+	 * å‚™è€ƒã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return å‚™è€ƒ
 	 */
 	public String getRemark() {
 		return remark;
 	}
 	/**
-	 * “¾“_‚ğString‚©‚çint‚É•ÏŠ·‚·‚éB©ŒÈV"™",‡V"š"‚Ìê‡‚Í‹L†‚ğÁ‹‚µ‚Ä‚©‚ç•ÏŠ·‚·‚éB
-	 * @param str@•ÏŠ·‚·‚é•¶š—ñ
-	 * @return •ÏŠ·Œ‹‰Ê
+	 * å¾—ç‚¹ã‚’Stringã‹ã‚‰intã«å¤‰æ›ã™ã‚‹ã€‚è‡ªå·±æ–°"â˜†",è©¦åˆæ–°"â˜…"ã®å ´åˆã¯è¨˜å·ã‚’æ¶ˆå»ã—ã¦ã‹ã‚‰å¤‰æ›ã™ã‚‹ã€‚
+	 * @param strã€€å¤‰æ›ã™ã‚‹æ–‡å­—åˆ—
+	 * @return å¤‰æ›çµæœ
 	 */
 	private int StringToInt(String str) {
 		try {
-		if(str.charAt(str.length()-1)=='™'||str.charAt(str.length()-1)=='š') {
+		if(str.charAt(str.length()-1)=='â˜†'||str.charAt(str.length()-1)=='â˜…') {
 			return Integer.parseInt(str.substring(0, str.length()-1));
 		}else {
 			return Integer.parseInt(str);
@@ -114,8 +114,8 @@ public class Member {
 		open = true;
 	}*/
 	/**
-	 * ‘Iè‚ªƒI[ƒvƒ“‚Ì‘IèiŸ”s‚ÉŠÖŒW‚µ‚È‚¢‘Ièj‚©‚Ç‚¤‚©‚ğæ“¾‚·‚éB
-	 * @return ƒI[ƒvƒ“‚Ì‘Iè‚©”Û‚©
+	 * é¸æ‰‹ãŒã‚ªãƒ¼ãƒ—ãƒ³ã®é¸æ‰‹ï¼ˆå‹æ•—ã«é–¢ä¿‚ã—ãªã„é¸æ‰‹ï¼‰ã‹ã©ã†ã‹ã‚’å–å¾—ã™ã‚‹ã€‚
+	 * @return ã‚ªãƒ¼ãƒ—ãƒ³ã®é¸æ‰‹ã‹å¦ã‹
 	 */
 	public boolean isOpnen() {
 		return open;
