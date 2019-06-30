@@ -1,7 +1,53 @@
 package builder;
 
-import static builder.TagProperty.*;
-import static builder.TagType.*;
+import static builder.TagProperty.ALIGN;
+import static builder.TagProperty.BORDER;
+import static builder.TagProperty.CHARSET;
+import static builder.TagProperty.CLASS;
+import static builder.TagProperty.COLSPAN;
+import static builder.TagProperty.HREF;
+import static builder.TagProperty.ID;
+import static builder.TagType.A;
+import static builder.TagType.BODY;
+import static builder.TagType.BR;
+import static builder.TagType.CAPTION;
+import static builder.TagType.DIV;
+import static builder.TagType.H1;
+import static builder.TagType.H2;
+import static builder.TagType.H3;
+import static builder.TagType.HEAD;
+import static builder.TagType.HTML;
+import static builder.TagType.MAIN;
+import static builder.TagType.META;
+import static builder.TagType.P;
+import static builder.TagType.SPAN;
+import static builder.TagType.TABLE;
+import static builder.TagType.TD;
+import static builder.TagType.TFOOT;
+import static builder.TagType.TH;
+import static builder.TagType.THEAD;
+import static builder.TagType.TITLE;
+import static builder.TagType.TR;
+import static builder.TagType._A;
+import static builder.TagType._BODY;
+import static builder.TagType._CAPTION;
+import static builder.TagType._DIV;
+import static builder.TagType._H1;
+import static builder.TagType._H2;
+import static builder.TagType._H3;
+import static builder.TagType._HEAD;
+import static builder.TagType._HTML;
+import static builder.TagType._MAIN;
+import static builder.TagType._META;
+import static builder.TagType._P;
+import static builder.TagType._SPAN;
+import static builder.TagType._TABLE;
+import static builder.TagType._TD;
+import static builder.TagType._TFOOT;
+import static builder.TagType._TH;
+import static builder.TagType._THEAD;
+import static builder.TagType._TITLE;
+import static builder.TagType._TR;
 
 /**
  * HTMLを構築するビルダークラス<br>

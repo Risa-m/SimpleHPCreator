@@ -2,6 +2,7 @@ package builder;
 
 import java.util.HashMap;
 import java.util.Map;
+public class TagPropertyMap<V> {
 
 	/** プロパティ格納マップ */
 	private final Map<TagProperty, V> propertyMap = new HashMap<>();
